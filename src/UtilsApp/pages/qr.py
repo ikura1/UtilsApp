@@ -4,8 +4,8 @@ import qrcode
 import streamlit as st
 
 
-def create_qr_code_image(text: str):
-    qr = qrcode.QRCode(
+def create_qr_code_image(text: str) -> qrcode.image.pil.PilImage:  # type: ignore
+    qr = qrcode.QRCode(  # type: ignore
         version=1,
         error_correction=qrcode.ERROR_CORRECT_L,
         box_size=10,
@@ -26,11 +26,11 @@ Urlを入力すると、QRコードを生成します。
 """
 )
 
-text = st.text_input("Enter text to convert to QR code", "https://google.com")
-if not re.match(r"https?://.+", text):
+url = st.text_input("Enter text to convert to QR code", "https://google.com")
+if not re.match(r"https?://.+", url):
     st.error("Please enter a valid URL starting with http:// or https://")
 else:
-    image = create_qr_code_image(text)
+    image = create_qr_code_image(url)
     image_path = "qr_code.png"
 
     image.save(image_path)
