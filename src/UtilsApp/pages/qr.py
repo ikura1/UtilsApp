@@ -4,7 +4,7 @@ import qrcode
 import streamlit as st
 
 
-def create_qr_code_image(text: str) -> qrcode.image.pil.PilImage:  # type: ignore
+def create_qr_code_image(text: str):  # type: ignore
     qr = qrcode.QRCode(  # type: ignore
         version=1,
         error_correction=qrcode.ERROR_CORRECT_L,
