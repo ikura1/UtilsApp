@@ -9,6 +9,7 @@ def run():
     page = st.navigation(
         [
             st.Page("pages/hello.py", title="Hello"),
+            st.Page("pages/qr.py", title="Text2QRCode"),
         ]
     )
     page.run()

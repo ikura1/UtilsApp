@@ -99,6 +99,8 @@ pyflakes==3.2.0
     # via flake8
 pygments==2.18.0
     # via rich
+pypng==0.20220715.0
+    # via qrcode
 python-dateutil==2.9.0.post0
     # via pandas
 pytz==2024.1
@@ -106,6 +108,8 @@ pytz==2024.1
 pyyaml==6.0.1
     # via bandit
     # via pre-commit
+qrcode==7.4.2
+    # via pythontemplateproject
 referencing==0.35.1
     # via jsonschema
     # via jsonschema-specifications
@@ -134,6 +138,7 @@ toolz==0.12.1
 tornado==6.4.1
     # via streamlit
 typing-extensions==4.12.2
+    # via qrcode
     # via streamlit
 tzdata==2024.1
     # via pandas
