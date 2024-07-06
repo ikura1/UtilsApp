@@ -1,7 +1,7 @@
 import re
 
-import streamlit as st
 import qrcode
+import streamlit as st
 
 
 def create_qr_code_image(text: str):
